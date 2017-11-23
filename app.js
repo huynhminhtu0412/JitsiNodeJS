@@ -13,11 +13,16 @@ var handlebars = require('express-handlebars').create(
         extname: 'handlebars'
     });
 
+
+
 var index = require('./routes/index');
 var users = require('./routes/users');
 var app = express();
 
 app.engine('handlebars',handlebars.engine); //handlebar engine
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', '.hbs');
 
 //app.set('port', process.env.PORT || 1900);
 

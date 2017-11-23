@@ -4,12 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var testDirname = __dirname + "JitsiNodeJS";
 //Setup handlebar layout and partials directory
 var handlebars = require('express-handlebars').create(
     {   defaultLayout:'main',
-        layoutsDir: path.join(__dirname, "/views/layouts"), //Set layout directory
-        partialsDir: path.join(__dirname, "/views/partials"), //Set partial directory
+        layoutsDir: path.join(testDirname, "/views/layouts"), //Set layout directory
+        partialsDir: path.join(testDirname, "/views/partials"), //Set partial directory
         extname: 'handlebars'
     });
 
@@ -21,8 +21,8 @@ var app = express();
 
 app.engine('handlebars',handlebars.engine); //handlebar engine
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', '.hbs');
+app.set('views', path.join(testDirname, 'views'));
+
 
 //app.set('port', process.env.PORT || 1900);
 

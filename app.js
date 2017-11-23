@@ -28,7 +28,7 @@ app.set('view engine', '.hbs');
 
 //route to home page
 app.get('/', function(req,res) {
-    res.render('home');
+    res.send(__dirname);
 });
 
 //route to about page

@@ -1,0 +1,30 @@
+<div class="page-header">
+    <h1>
+        Classroom
+    </h1>
+</div>
+
+<div class="modal-body row">
+    <div class="col-md-6">
+        <h3>Slide Management</h3>
+    </div>
+    <div class="col-md-6">
+        <h3>Jitsi Meeting</h3>
+        <div id="meet"> </div>
+    </div>
+</div>
+
+<script src="https://meet.jit.si/external_api.js"></script>
+<script>
+    $(document).ready(function(){
+        var domain = "meet.jit.si";
+        var options = {
+            roomName: "JitsiMeetAPIExample",
+            width: 700,
+            height: 700,
+            parentNode: document.querySelector('#meet')
+        }
+        var api = new JitsiMeetExternalAPI(domain, options);
+    });
+</script>
+

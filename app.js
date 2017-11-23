@@ -4,7 +4,7 @@
 // var logger = require('morgan');
 // var cookieParser = require('cookie-parser');
 // var bodyParser = require('body-parser');
-var testDirname = __dirname + "JitsiNodeJS";
+// var testDirname = __dirname + "JitsiNodeJS";
 // //Setup handlebar layout and partials directory
 // var handlebars = require('express-handlebars').create(
 //     {   defaultLayout:'main',
@@ -108,8 +108,8 @@ var app = express();
 // view engine setup
 var handlebars = require('express-handlebars').create(
     {   defaultLayout:'main',
-        layoutsDir: path.join(testDirname, "/views/layouts"), //Set layout directory
-        partialsDir: path.join(testDirname, "/views/partials"), //Set partial directory
+        layoutsDir: path.join(__dirname, "/views/layouts"), //Set layout directory
+        partialsDir: path.join(__dirname, "/views/partials"), //Set partial directory
         extname: 'handlebars'
     });
 app.engine('handlebars',handlebars.engine); //handlebar engine

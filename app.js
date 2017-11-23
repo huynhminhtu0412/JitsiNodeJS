@@ -118,7 +118,7 @@ app.set('views', path.join(__dirname, 'views'));
 //deploy khong chay dc thi bo comment dong duoi
 // t di an khong lat no dong cua @@ bb ok
 
-// app.set('view engine', 'hbs');
+app.set('view engine', 'handlebars');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));

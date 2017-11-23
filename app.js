@@ -23,7 +23,7 @@ app.engine('handlebars',handlebars.engine); //handlebar engine
 
 //route to home page
 app.get('/', function(req,res) {
-    res.send('home');
+    res.render('home');
 });
 
 //route to about page

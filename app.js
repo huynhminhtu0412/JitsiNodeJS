@@ -46,11 +46,11 @@ app.use(function(err,req,res,next) {
     next();
 });
 
-app.use(function(req,res) {
-    res.type('text/html');
-    res.status (404);
-    res.render('404');
-})
+// app.use(function(req,res) {
+//     res.type('text/html');
+//     res.status (404);
+//     res.render('404');
+// })
 
 app.use(function (err, req, res, next) {
     console.error(err.stack);

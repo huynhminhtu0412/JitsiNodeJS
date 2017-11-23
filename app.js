@@ -28,7 +28,7 @@ app.set('views', path.join(testDirname, 'views'));
 
 //route to home page
 app.get('/', function(req,res) {
-    res.send(__dirname);
+    res.render('home');
 });
 
 //route to about page

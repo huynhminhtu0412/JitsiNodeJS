@@ -31,7 +31,7 @@
 // app.get('/', function(req,res) {
 //     res.render('home');
 // });
-//
+// //
 // //route to about page
 // app.get('/about', function(req,res) {
 //     res.render('about');
@@ -115,8 +115,7 @@ var handlebars = require('express-handlebars').create(
 app.engine('handlebars',handlebars.engine); //handlebar engine
 
 app.set('views', path.join(__dirname, 'views'));
-//deploy khong chay dc thi bo comment dong duoi
-// t di an khong lat no dong cua @@ bb ok
+
 
 app.set('view engine', 'handlebars');
 
